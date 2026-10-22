@@ -3,16 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Медиа о странных привычках людей</title>
+    <title>Медиа о привычках</title>
   </head>
   <body>
-    <h1>Странные привычки людей</h1>
+    <header>
+      <nav class="header__menu">
+        <a href="/pages/about.html" class="header__link">о нас</a>
+        <a href="index.html" class="header__link">
+          <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="header__star header__star--active" d="M17.931 0C19.1896 0.000184295 20.2103 1.00851 20.2103 2.25195V10.2803L27.5061 7.43555C28.695 6.9725 30.0367 7.56591 30.4798 8.75L31.8577 12.4346C32.3036 13.6276 31.661 14.9484 30.4397 15.3506L22.6575 17.9131L27.4144 24.2227C28.1692 25.224 27.9547 26.6418 26.9368 27.3818L23.9524 29.5508C23.3854 29.9629 22.6894 30.0778 22.056 29.9238C21.551 29.801 21.0854 29.5075 20.7561 29.0586L15.8997 22.4365L11.2659 29.0322C11.2519 29.0522 11.2375 29.0724 11.2229 29.0918C10.4917 30.0644 9.10482 30.2931 8.09111 29.5957L4.88799 27.3916C3.83212 26.6649 3.5943 25.2199 4.3626 24.2002L9.10869 17.9033L1.54131 15.3438C0.521353 14.9987 -0.090939 14.0097 0.0110326 12.9932C0.0278144 12.8261 0.0636447 12.658 0.120408 12.4922L1.3792 8.81641C1.79619 7.59999 3.1576 6.97479 4.36845 7.44238L11.7308 10.2852V2.25195C11.7308 1.00856 12.7515 0.000261655 14.0101 0H17.931Z" fill="#1C1C1C"/>
+          </svg>
+        </a>
+        <a href="/pages/habits/" class="header__link">статья</a>
+      </nav>
+    </header>
 
-    <nav>
-      <a href="./pages/about.html">О проекте</a>
-      <a href="./pages/habits.html">Привычки</a>
-      <a href="./pages/mechanisms.html">Механизмы</a>
-      <a href="./pages/test.html">Тест</a>
-    </nav>
+    <section class="hero">
+      <div class="hero__wrapper">
+        <p class="hero__text">медиа о&nbsp;вредных привычках,<br>которыми мы&nbsp;снимаем напряжение</p>
+        <img src="/images/hero-arrow.svg" alt="" class="hero__arrow">
+      </div>
+      
+      <img src="/images/hero-logo.svg" alt="" class="hero__logo">
+
+      <div class="hero__habit__wrapper" id="hero__habit-1">
+        <img src="/images/hero-habit-icon-1.svg" alt="" class="hero__habit__icon">
+        <div class="hero__habit__content" id="hero__habit__content-1">
+          <p class="hero__habit__title"># думскроллинг</p>
+          <p class="hero__habit__text">открыла ленту на&nbsp;минутку.<br>уже час ночи...</p>
+        </div>
+      </div>
+
+      <div class="hero__habit__wrapper" id="hero__habit-2">
+        <img src="/images/hero-habit-icon-2.svg" alt="" class="hero__habit__icon">
+        <div class="hero__habit__content" id="hero__habit__content-2">
+          <p class="hero__habit__title"># заедание стресса</p>
+          <p class="hero__habit__text">тяжелый день =<br>я&nbsp;заслужила шоколадку</p>
+        </div>
+      </div>
+
+      <div class="hero__habit__wrapper" id="hero__habit-3">
+        <img src="/images/hero-habit-icon-3.svg" alt="" class="hero__habit__icon">
+        <div class="hero__habit__content" id="hero__habit__content-3">
+          <p class="hero__habit__title"># импульсивные покупки</p>
+          <p class="hero__habit__text">корзина сама собралась.<br>честно.</p>
+        </div>
+      </div>
+
+      <div class="hero__habit__wrapper" id="hero__habit-4">
+        <img src="/images/hero-habit-icon-4.svg" alt="" class="hero__habit__icon">
+        <div class="hero__habit__content" id="hero__habit__content-4">
+          <p class="hero__habit__title"># прокрастинация</p>
+          <p class="hero__habit__text">почему я&nbsp;убираюсь,<br>только когда горит дедлайн?</p>
+        </div>
+      </div>
+
+      <div class="hero__habit__wrapper" id="hero__habit-5">
+        <img src="/images/hero-habit-icon-5.svg" alt="" class="hero__habit__icon">
+        <div class="hero__habit__content" id="hero__habit__content-5">
+          <p class="hero__habit__title"># откладывание сна</p>
+          <p class="hero__habit__text">это мое единственное<br>время для себя</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="question">
+      <div class="questions__row">
+        <div class="question__wrapper">
+          <p class="question__content" id="question__content-1">не&nbsp;можешь уснуть<br>без видео на&nbsp;фоне?</p>
+          <img src="/images/question-star-1.svg" alt="" class="question__star">
+        </div>
+
+        <div class="question__wrapper">
+          <p class="question__content" id="question__content-2">ешь сладкое, когда<br>много навалилось?</p>
+          <img src="/images/question-star-2.svg" alt="" class="question__star">
+        </div>
+
+        <div class="question__wrapper">
+          <p class="question__content" id="question__content-3">хватаешь телефон<br>в&nbsp;каждой паузе?</p>
+          <img src="/images/question-star-3.svg" alt="" class="question__star">
+        </div>
+      </div>
+
+      <div class="question__text__wrapper">
+        <p class="question__text">если нашлось хотя&nbsp;бы одно &laquo;да&raquo;,<br>нам есть что тебе рассказать!</p>
+        <img src="/images/question-arrow.svg" alt="" class="question__arrow">
+      </div>
+    </section>
+
+    <section class="form">
+
+      <p class="form__heading">оставь почту, и&nbsp;мы&nbsp;напишем,<br>когда выйдут первые разборы</p>
+
+      <form class="form__wrapper" id="my-form">
+        <input class="input" type="email" id="email" name="email" placeholder="" data-fs-field />
+        <label class="form__label" for="email">твой e-mail</label>
+
+        <button class="button" type="submit" data-fs-submit-btn>жду запуска!</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer__wrapper">
+        <p class="footer__heading">авторки проекта</p>
+        <div class="authors__wrapper">
+          <div class="photo__wrapper">
+            <img src="/images/sveta.jpeg" alt="" class="footer__photo">
+            <img src="/images/masha.jpeg" alt="" class="footer__photo">
+            <img src="/images/lina.jpg" alt="" class="footer__photo">
+          </div>
+          <div class="names__wrapper">
+            <p class="footer__name">света сенько</p>
+            <p class="footer__name">маша рачинская</p>
+            <p class="footer__name">лина солдатенко</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__wrapper">
+          <p class="footer__heading">оставайтесь на связи</p>
+            <form class="form__wrapper footer__form" id="my-form">
+              <input class="input footer__input" type="email" id="email" name="email" placeholder="" data-fs-field />
+              <label class="form__label footer__label" for="email">твой e-mail</label>
+
+              <button class="button__arrow" type="submit" data-fs-submit-btn></button>
+            </form>
+        </div>
+
+        <div class="footer__wrapper">
+          <p class="footer__heading">уже можно почитать</p>
+          <div class="footer__links__wrapper">
+            <a href="" class="footer__link">о нас</a>
+            <a href="" class="footer__link">статья</a>
+          </div>
+        </div>
+
+        <div class="footer__wrapper">
+          <p class="footer__heading">мы в соцсетях</p>
+          <div class="footer__social__wrapper">
+            <a href="https://t.me/zaelo_media"><img src="/images/tg.svg" alt="" class="footer__social"></a>
+            <a href="https://vk.ru/zaelo_media"><img src="/images/vk.svg" alt="" class="footer__social"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+
+      formspree("initForm", {
+        formElement: "#my-form",
+        formId: "mkjojvpv",
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>

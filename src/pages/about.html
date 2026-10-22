@@ -11,33 +11,6 @@
     <div data-fs-success>Спасибо! Сообщение отправлено.</div>
     <div data-fs-error>Что-то пошло не так.</div>
 
-    <form id="my-form">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" data-fs-field />
-
-      <span data-fs-error="email"></span>
-
-      <label for="message">Сообщение</label>
-      <textarea id="message" name="message" data-fs-field></textarea>
-
-      <span data-fs-error="message"></span>
-
-      <button type="submit" data-fs-submit-btn>Отправить</button>
-    </form>
-
-    <script>
-      window.formspree =
-        window.formspree ||
-        function () {
-          (formspree.q = formspree.q || []).push(arguments);
-        };
-
-      formspree("initForm", {
-        formElement: "#my-form",
-        formId: "mkjojvpv",
-      });
-    </script>
-
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    
   </body>
 </html>
