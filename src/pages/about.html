@@ -3,14 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О проекте</title>
+    <title>Медиа о привычках</title>
   </head>
   <body>
-    <h1>О проекте</h1>
+    <header>
+      <nav class="header__menu">
+        <a href="/pages/about.html" class="header__link header__link--active">о нас</a>
+        <a href="index.html" class="header__link">
+          <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="header__star" d="M17.931 0C19.1896 0.000184295 20.2103 1.00851 20.2103 2.25195V10.2803L27.5061 7.43555C28.695 6.9725 30.0367 7.56591 30.4798 8.75L31.8577 12.4346C32.3036 13.6276 31.661 14.9484 30.4397 15.3506L22.6575 17.9131L27.4144 24.2227C28.1692 25.224 27.9547 26.6418 26.9368 27.3818L23.9524 29.5508C23.3854 29.9629 22.6894 30.0778 22.056 29.9238C21.551 29.801 21.0854 29.5075 20.7561 29.0586L15.8997 22.4365L11.2659 29.0322C11.2519 29.0522 11.2375 29.0724 11.2229 29.0918C10.4917 30.0644 9.10482 30.2931 8.09111 29.5957L4.88799 27.3916C3.83212 26.6649 3.5943 25.2199 4.3626 24.2002L9.10869 17.9033L1.54131 15.3438C0.521353 14.9987 -0.090939 14.0097 0.0110326 12.9932C0.0278144 12.8261 0.0636447 12.658 0.120408 12.4922L1.3792 8.81641C1.79619 7.59999 3.1576 6.97479 4.36845 7.44238L11.7308 10.2852V2.25195C11.7308 1.00856 12.7515 0.000261655 14.0101 0H17.931Z" fill="#1C1C1C"/>
+          </svg>
+        </a>
+        <a href="/pages/habits/phone-in-every-pause.html" class="header__link">статья</a>
+      </nav>
+    </header>
 
-    <div data-fs-success>Спасибо! Сообщение отправлено.</div>
-    <div data-fs-error>Что-то пошло не так.</div>
+    <section class="hero about__hero">
+      <div class="hero__wrapper about__hero__wrapper">
+        <div class="about__h1__wrapper">
+          <h1 class="about__h1">кто мы</h1>
+          <img src="../images/question-symbol.svg" alt="" class="about__h1__question__symbol">
+        </div>
+        <p class="about__text">&laquo;заело&raquo;&nbsp;&mdash; медиа про привычки,<br>которыми мы&nbsp;снимаем напряжение,<br>а&nbsp;потом не&nbsp;можем остановиться</p>
+      </div>
+    </section>
 
-    
+    <section class="why">
+      <h2 class="about__h2">зачем мы<br>это делаем?</h2>
+      <div class="why__actions__wrapper">
+        <div class="why__action" id="why__action-1">мы сами листаем ленту<br>вместо сна</div>
+        <div class="why__action" id="why__action-2">откладываем важные дела<br>до&nbsp;последнего</div>
+        <div class="why__action" id="why__action-3">и&nbsp;покупаем&nbsp;то, что&nbsp;совсем<br>не&nbsp;планировали</div>
+      </div>
+    </section>
+
+    <section class="statistics">
+      <div class="statistics__arrow__wrapper arrow__wrapper__right">
+        <p class="statistics__text">мы&nbsp;поговорили с&nbsp;15&nbsp;людьми и&nbsp;опросили<br>еще&nbsp;43, и&nbsp;выяснили, что почти у&nbsp;всех<br>одна и&nbsp;та&nbsp;же история</p>
+        <img class="statistics__arrow-1" src="../images/statistics-arrow-1.svg">
+      </div>
+
+      <div class="statistics__wrapper">
+        <div class="statistics__item">
+          <div class="percent__wrapper">
+            <p class="percent__number">74</p>
+            <img src="../images/percent.svg" alt="" class="percent__image">
+          </div>
+          <p class="percent__text">тянутся к привычке<br>из-за стресса</p>
+        </div>
+
+        <div class="statistics__item">
+          <div class="percent__wrapper">
+            <p class="percent__number">56</p>
+            <img src="../images/percent.svg" alt="" class="percent__image">
+          </div>
+          <p class="percent__text">пробовали избавиться<br>и сорвались</p>
+        </div>
+
+        <div class="statistics__item">
+          <div class="percent__wrapper">
+            <p class="percent__number">67</p>
+            <img src="../images/percent.svg" alt="" class="percent__image">
+          </div>
+          <p class="percent__text">не могут остановиться<br>в моменте</p>
+        </div>
+      </div>
+
+      <div class="statistics__arrow__wrapper arrow__wrapper__left">
+        <img class="statistics__arrow-2" src="../images/statistics-arrow-2.svg">
+        <p class="statistics__text">выходит, дело не&nbsp;в&nbsp;силе воли,<br>а&nbsp;в&nbsp;том, что запускает привычку</p>
+      </div>
+    </section>
+
+    <section class="topics">
+      <div class="topics__habits__wrapper">
+        <div class="topics__habits__row" id="topics__habits__row-1">
+          <div class="topics__habit" id="topics__habit-1"># откладывание сна</div>
+          <div class="topics__habit" id="topics__habit-2"># прокрастинация</div>
+        </div>
+
+        <div class="topics__habits__row" id="topics__habits__row-2">
+          <div class="topics__habit" id="topics__habit-3"># думскроллинг</div>
+          <div class="topics__habit" id="topics__habit-4"># скроллинг маркетплейсов</div>
+        </div>
+
+        <div class="topics__habits__row" id="topics__habits__row-3">
+          <div class="topics__habit" id="topics__habit-5"># заедание стресса</div>
+          <div class="topics__habit" id="topics__habit-6"># сладкое в награду</div>
+        </div>
+
+        <div class="topics__habits__row" id="topics__habits__row-4">
+          <div class="topics__habit" id="topics__habit-7"># псевдопродуктивность</div>
+          <div class="topics__habit" id="topics__habit-8"># телефон в каждой паузе</div>
+        </div>
+
+        <div class="topics__habits__row" id="topics__habits__row-5">
+          <div class="topics__habit" id="topics__habit-9"># импульсивные покупки</div>
+        </div>
+      </div>
+
+      <h2 class="about__h2">темы</h2>
+      <div class="topics__row">
+        <div class="topic__wrapper">
+          <img src="../images/hero-habit-icon-1.svg" alt="" class="topic__icon">
+          <p class="topic__name">экран</p>
+        </div>
+
+        <div class="topic__wrapper">
+          <img src="../images/hero-habit-icon-4.svg" alt="" class="topic__icon">
+          <p class="topic__name">работа</p>
+        </div>
+
+        <div class="topic__wrapper">
+          <img src="../images/hero-habit-icon-2.svg" alt="" class="topic__icon">
+          <p class="topic__name">еда</p>
+        </div>
+
+        <div class="topic__wrapper">
+          <img src="../images/hero-habit-icon-5.svg" alt="" class="topic__icon">
+          <p class="topic__name">сон</p>
+        </div>
+
+        <div class="topic__wrapper">
+          <img src="../images/hero-habit-icon-3.svg" alt="" class="topic__icon">
+          <p class="topic__name">покупки</p>
+        </div>
+      </div>
+
+      <p class="about__text">пишем о&nbsp;привычках, которыми мы&nbsp;на&nbsp;автомате<br>сбрасываем напряжение и&nbsp;которые потом начинают<br>нам мешать</p>
+    </section>
+
+    <section class="principles">
+      <h2 class="about__h2">наши принципы</h2>
+      <div class="principles__wrapper">
+        <div class="principle">
+          <p class="principle__heading">объясняем<br><span class="orange">и не стыдим</span></p>
+          <p class="principle__text">без давления разбираемся,<br>почему так</p>
+        </div>
+
+        <div class="principle">
+          <p class="principle__heading">рассказываем<br><span class="orange">честно</span></p>
+          <p class="principle__text">со&nbsp;срывами и&nbsp;откатами,<br>а&nbsp;не&nbsp;«взял и&nbsp;бросил»</p>
+        </div>
+
+        <div class="principle">
+          <p class="principle__heading">проверяем<br><span class="orange">факты</span></p>
+          <p class="principle__text">объяснения подкрепляем<br>исследованием</p>
+        </div>
+
+        <div class="principle">
+          <p class="principle__heading">даем один<br>реальный шаг</p>
+          <p class="principle__text">маленькое действие, которое<br><span class="orange">можно сделать сегодня</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress">
+      <p class="progress__heading">пока сайт в работе, загляни<br>в наши соцсети!</p>
+      <div class="progress__social__wrapper">
+        <a href="https://t.me/zaelo_media"><img src="/images/tg-black.svg" alt="" class="progress__social"></a>
+        <a href="https://vk.ru/zaelo_media"><img src="/images/vk-black.svg" alt="" class="progress__social"></a>
+      </div>
+      <a class="button progress__button" href="/pages/habits/phone-in-every-pause.html">
+        <p>а первую статью уже можно почитать </p>
+        <img src="../images/arrow-button-white.svg" alt="" class="button__arrow__white"> </a>
+    </section>
+
+    <footer>
+      <div class="footer__wrapper">
+        <p class="footer__heading">авторки проекта</p>
+        <div class="authors__wrapper">
+          <div class="photo__wrapper">
+            <img src="/images/sveta.jpeg" alt="" class="footer__photo">
+            <img src="/images/masha.jpeg" alt="" class="footer__photo">
+            <img src="/images/lina.jpg" alt="" class="footer__photo">
+          </div>
+          <div class="names__wrapper">
+            <p class="footer__name">света сенько</p>
+            <p class="footer__name">маша рачинская</p>
+            <p class="footer__name">лина солдатенко</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__wrapper">
+          <p class="footer__heading">оставайтесь на связи</p>
+            <form class="form__wrapper footer__form" id="my-form">
+              <input class="input footer__input" type="email" id="email" name="email" placeholder=" " data-fs-field />
+              <label class="form__label footer__label" for="email">твой e-mail</label>
+
+              <button class="button__arrow" type="submit" data-fs-submit-btn></button>
+            </form>
+        </div>
+
+        <div class="footer__wrapper">
+          <p class="footer__heading">уже можно почитать</p>
+          <div class="footer__links__wrapper">
+            <a href="" class="footer__link">о нас</a>
+            <a href="" class="footer__link">статья</a>
+          </div>
+        </div>
+
+        <div class="footer__wrapper">
+          <p class="footer__heading">мы в соцсетях</p>
+          <div class="footer__social__wrapper">
+            <a href="https://t.me/zaelo_media"><img src="/images/tg.svg" alt="" class="footer__social"></a>
+            <a href="https://vk.ru/zaelo_media"><img src="/images/vk.svg" alt="" class="footer__social"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+
+      formspree("initForm", {
+        formElement: "#my-form",
+        formId: "mkjojvpv",
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>

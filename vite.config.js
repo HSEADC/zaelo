@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, 'src')
 const outDir = path.resolve(__dirname, 'docs')
 
 const pages = {
-    main: {
+  main: {
     file: 'index.html',
     chunks: ['/javascripts/allStyle.js']
   },
