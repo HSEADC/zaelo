@@ -34,7 +34,11 @@ const pages = {
   'why-the-brain-chooses-pleasure-now': {
     file: 'pages/mechanisms/why-the-brain-chooses-pleasure-now.html',
     chunks: ['/javascripts/allStyle.js']
-  }
+  },
+  'phone-in-every-pause': {
+    file: 'pages/habits/phone-in-every-pause.html',
+    chunks: ['/javascripts/allStyle.js']
+  },
 }
 
 const chunksByFile = Object.fromEntries(
