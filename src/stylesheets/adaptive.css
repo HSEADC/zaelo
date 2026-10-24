@@ -168,6 +168,137 @@
     .footer__links__wrapper {
         gap: 12px;
     }
+
+    /* ABOUT */
+
+    /* hero */
+
+    .about__h1 {
+        font-size: 180px;
+    }
+
+    .about__h1__question__symbol {
+        width: 90px;
+    }
+
+    /* why */
+
+    .why {
+        padding: 0;
+    }
+
+    .about__h2 {
+        font-size: 96px;
+    }
+
+    .why__action {
+        padding: 20px;
+        padding-right: 48px;
+        width: 230px;
+        font-size: 20px;
+    }
+
+    #why__action-1 {
+        transform: rotate(-4.3deg) translate(30px, 0);
+    }
+
+    #why__action-3 {
+        transform: rotate(-2.4deg) translate(-10px, 0);
+    }
+
+    /* statistics */
+
+    .statistics {
+        gap: 24px;
+    }
+
+    .statistics__arrow-1 {
+        width: 62px;
+    }
+
+    .statistics__arrow-2 {
+        width: 56px;
+    }
+
+    .percent__wrapper {
+        gap: 4px;
+    }
+
+    .percent__number {
+        font-size: 96px;
+    }
+
+    .percent__image {
+        width: 92px;
+    }
+
+    .percent__text {
+        font-size: 20px;
+    }
+
+    /* topics */
+
+    .about__text__topics {
+        width: 700px;
+    }
+
+    .topics {
+        padding: 0 32px;
+    }
+
+    .topics__habits__wrapper {
+        width: 700px;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .topics__habit {
+        position: static;
+        transform: none !important;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .topics__row {
+        gap: 24px;
+    }
+
+    .topic__wrapper {
+        width: 90px;
+        transform: translateY(-20px);
+    }
+
+    .about__text__topics {
+        margin-bottom: 32px;
+        margin-top: 20px;
+    }
+
+    /* principles */
+
+    .principles__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .principle {
+        width: calc((100% - 16px) / 2);
+    }
+
+    /* progress */
+
+    .progress {
+        gap: 40px;
+    }
+
+    .progress__heading {
+        font-size: 40px;
+    }
+
+    .progress__social {
+        width: 112px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
