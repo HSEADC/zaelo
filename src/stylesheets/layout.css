@@ -303,7 +303,7 @@ a {
 }
 .input:focus + .form__label,
 .input:not(:placeholder-shown) + .form__label {
-    transform: scale(0.6) translateY(-20px);
+    transform: scale(0.8) translateY(-40px);
 }
 
 /* footer */
@@ -319,6 +319,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.footer__heading {
+    font-size: 16px;
 }
 
 .authors__wrapper {
@@ -389,6 +393,11 @@ footer {
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--c-grey);
+}
+
+.footer__input:focus + .footer__label,
+.footer__inputinput:not(:placeholder-shown) + .footer__label {
+    transform: scale(0.8) translateY(-24px);
 }
 
 .footer__links__wrapper {
