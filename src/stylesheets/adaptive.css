@@ -548,4 +548,244 @@
     .footer__social {
         width: 40px;
     }
+
+    /* ABOUT */
+
+    /* hero */
+
+    .about__h1__wrapper {
+        gap: 8px;
+    }
+
+    .about__h1 {
+        font-size: 88px;
+    }
+
+    .about__h1__question__symbol {
+        width: 43px;
+    }
+
+    .about__text {
+        font-size: 20px;
+    }
+
+    /* why */
+
+    .why {
+        padding: 32px 16px;
+    }
+
+    .about__h2 {
+        font-size: 48px;
+    }
+
+    .why__actions__wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .why__action {
+        padding: 16px 24px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    #why__action-1 {
+        transform: rotate(-4.3deg) translate(0);
+    }
+
+    #why__action-3 {
+        transform: rotate(-2.4deg) translate(0);
+        z-index: 3;
+    }
+
+    /* statistics */
+
+    .statistics {
+        gap: 32px;
+    }
+
+    .statistics__text {
+        font-size: 16px;
+    }
+
+    .arrow__wrapper__right {
+        align-items: center;
+    }
+
+    .statistics__arrow__wrapper {
+        gap: 32px;
+    }
+
+    .arrow__wrapper__left {
+        align-items: center;
+    }
+
+    .statistics__arrow-1 {
+        width: 60px;
+        transform: translate(0);
+    }
+
+    .statistics__arrow-2 {
+        width: 40px;
+        transform: translate(0);
+    }
+
+    .statistics__wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 32px;
+    }
+
+    .percent__wrapper {
+        gap: 4px;
+    }
+
+    .percent__number {
+        font-size: 112px;
+    }
+
+    .percent__image {
+        width: 104px;
+    }
+
+    .percent__text {
+        font-size: 20px;
+    }
+
+    /* topics */
+
+    .about__h2--mobile {
+        font-size: 64px;
+    }
+
+    .about__text__topics {
+        width: 100%;
+    }
+
+    .topics {
+        padding: 16px 32px;
+    }
+
+    .topics__habits__wrapper {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #topics__habit-3 {
+        order: 1;
+    }
+
+    #topics__habit-2 {
+        order: 2;
+    }
+
+    #topics__habit-5 {
+        order: 3;
+    }
+
+    #topics__habit-9 {
+        order: 4;
+    }
+
+    #topics__habit-7 {
+        order: 5;
+    }
+
+    #topics__habit-1 {
+        order: 6;
+    }
+
+    #topics__habit-4 {
+        order: 7;
+    }
+
+    #topics__habit-6 {
+        order: 8;
+    }
+
+    #topics__habit-8 {
+        order: 9;
+    }
+
+    .topics__habit {
+        position: static;
+        transform: none !important;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .topics__row {
+        gap: 8px;
+    }
+
+    .topic__wrapper {
+        width: 62px;
+        transform: translateY(-16px);
+        gap: 8px;
+    }
+
+    .topic__icon {
+        width: 44px;
+    }
+
+    .topic__name {
+        font-size: 12px;
+    }
+
+    /* principles */
+
+    .principles__wrapper {
+        flex-wrap: wrap;
+        transform: translateY(-8px);
+        gap: 8px;
+    }
+
+    .principle {
+        width: 100%;
+    }
+
+    .principle__heading {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .principle__text {
+        font-size: 16px;
+    }
+
+    /* progress */
+
+    .progress {
+        gap: 24px;
+    }
+
+    .progress__heading {
+        font-size: 24px;
+    }
+
+    .progress__social__wrapper {
+        gap: 16px;
+    }
+
+    .progress__social {
+        width: 64px;
+    }
+
+    .progress__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        font-size: 15px;
+    }
+
+    .button__arrow__white {
+        width: 15px;
+    }
 }
