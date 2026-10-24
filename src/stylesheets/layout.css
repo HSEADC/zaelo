@@ -101,6 +101,10 @@ a {
     transform: translateY(-40px);
 }
 
+.hero__logo--mobile {
+    display: none;
+}
+
 .hero__habit__wrapper {
     display: flex;
     gap: 8px;
@@ -785,10 +789,17 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(../images/article-hero-bg.svg);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--c-green);
+    overflow: hidden;
+    position: relative;
+}
+
+.article__mascot {
+    position: absolute;
+    width: 570px;
+    right: 40px;
+    bottom: -150px;
+    transition: transform 0.5s ease;
 }
 
 .article__hero__content {
@@ -847,8 +858,8 @@ footer {
 
 .orange__star__hero {
     position: absolute;
-    top: 328px;
-    left: 648px;
+    top: 242px;
+    left: 569px;
 }
 
 .orange__star__familiar {

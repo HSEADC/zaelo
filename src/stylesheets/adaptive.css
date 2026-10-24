@@ -19,13 +19,6 @@
         margin-bottom: 24px;
     }
 
-    .hero__text {
-        width: 100%;
-        font-size: 24px;
-        font-weight: 500;
-        text-align: center;
-    }
-
     .hero__arrow {
         margin-top: 16px;
         transform: rotate(30deg);
@@ -142,8 +135,7 @@
     }
 
     .names__wrapper {
-        justify-content: space-between;
-        padding: 22px 0;
+        padding: 22px 0 30px;
     }
 
     .footer__name {
@@ -302,5 +294,258 @@
 }
 
 @media only screen and (max-width: 767px) {
+    section {
+        padding: 32px 16px;
+        margin-bottom: 32px;
+    }
 
+    /* header */
+
+    .header__menu {
+        width: auto;
+        justify-content: center;
+        top: 12px;
+        left: 16px;
+        right: 16px;
+        transform: none;
+    }
+
+    /* INDEX */
+
+    /* hero */
+
+    .hero {
+        height: auto;
+        position: relative;
+        justify-content: start;
+        margin-bottom: 32px;
+        padding: 40px 0;
+    }
+
+    .hero__wrapper {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .hero__arrow {
+        margin-top: 0;
+        transform: rotate(30deg);
+        width: 60px;
+    }
+
+    .hero__text {
+        font-size: 20px;
+    }
+
+    .hero__logo {
+        display: none;
+    }
+
+    .hero__logo--mobile {
+        display: block;
+        width: 100%;
+    }
+
+    #hero__habit-1 {
+        top: 130px;
+        left: 12%;
+    }
+
+    #hero__habit-2 {
+        display: block;
+        top: 190px;
+        right: 20%;
+    }
+
+    #hero__habit-3 {
+        top: 430px;
+        left: 45%;
+    }
+
+    #hero__habit-4 {
+        top: 285px;
+        left: 24%;
+    }
+
+    #hero__habit-5 {
+        top: 550px;
+        right: 23%;
+    }
+
+    .hero__habit__icon {
+        width: 48px;
+    }
+
+    .hero__habit__content {
+        display: none;
+    }
+
+    /* questions */
+
+    .questions__row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .question__wrapper {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .question__star {
+        width: 140px;
+        bottom: -32px;
+        right: 16px;
+        z-index: 1;
+    }
+
+    .question__content {
+        height: 100%;
+        padding: 24px;
+        font-size: 24px;
+    }
+
+    .question__text__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 32px;
+        padding: 32px 0;
+    }
+
+    .question__text {
+        font-size: 20px;
+        margin-top: 16px;
+    }
+
+    .question__arrow {
+        width: 76px;
+        position: static;
+    }
+
+    /* form */
+
+    .form {
+        height: auto;
+        gap: 24px;
+    }
+
+    .form__heading {
+        font-size: 24px;
+    }
+
+    .form__wrapper {
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .input {
+        padding: 16px;
+        width: 100%;
+    }
+
+    .button {
+        padding: 16px;
+    }
+
+    .form__label {
+        left: 16px;
+    }
+
+    .input:focus + .form__label,
+    .input:not(:placeholder-shown) + .form__label {
+        transform: scale(0.8) translateY(-40px);
+    }
+
+    /* footer */
+
+    footer {
+        padding: 32px 16px;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 24px;
+    }
+
+    .footer__wrapper {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .footer__wrapper--mobile {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .footer__heading {
+        font-size: 16px;
+    }
+
+    .authors__wrapper {
+        gap: 12px;
+    }
+
+    .photo__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__photo {
+        width: 64px;
+    }
+
+    .footer__photo:nth-child(2) {
+        left: 0;
+        top: -4px;
+    }
+
+    .footer__photo:nth-child(3) {
+        left: 0;
+        top: -8px;
+    }
+
+    .names__wrapper {
+        padding: 22px 0 30px;
+    }
+
+    .footer__name {
+        font-size: 18px;
+    }
+
+    .footer__content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .footer__input {
+        width: 100%;
+    }
+
+    .footer__label {
+        top: 12px;
+        left: 0;
+    }
+
+    .footer__form {
+        flex-direction: row;
+    }
+
+    .footer__input:focus + .footer__label,
+    .footer__inputinput:not(:placeholder-shown) + .footer__label {
+        transform: scale(0.8) translateY(-20px);
+    }
+
+    .footer__links__wrapper {
+        gap: 12px;
+    }
+
+    .footer__link {
+        font-size: 18px;
+    }
+
+    .footer__social {
+        width: 40px;
+    }
 }
