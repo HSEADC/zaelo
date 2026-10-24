@@ -153,3 +153,61 @@
 
   io.observe(target);
 })();
+
+(function initSteps() {
+  const target = document.querySelector('.steps__wrapper');
+  if (!target) return;
+
+  if (!('IntersectionObserver' in window)) {
+    target.classList.remove('is-hidden');
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          target.classList.remove('is-hidden');
+          io.disconnect();
+          return;
+        }
+      }
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0px 0px -10% 0px',
+    }
+  );
+
+  io.observe(target);
+})();
+
+(function initChecklistArrow() {
+  const arrow = document.querySelector('.arrow__checklist');
+  const target = document.querySelector('.no__notifications__wrapper');
+  
+  if (!arrow || !target) return;
+
+  if (!('IntersectionObserver' in window)) {
+    arrow.classList.remove('is-hidden');
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          arrow.classList.remove('is-hidden');
+          io.disconnect();
+          return;
+        }
+      }
+    },
+    {
+      threshold: 0.4,
+      rootMargin: '0px 0px -20% 0px',
+    }
+  );
+
+  io.observe(target);
+})();

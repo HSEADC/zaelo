@@ -29,7 +29,7 @@ const pages = {
   },
   'why-are-you-glued-to-the-phone': {
     file: 'pages/habits/why-are-you-glued-to-the-phone.html',
-    chunks: ['/javascripts/allStyle.js']
+    chunks: ['/javascripts/allStyle.js', '/javascripts/animation.js']
   },
 }
 

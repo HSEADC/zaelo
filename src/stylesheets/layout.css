@@ -706,19 +706,22 @@ opacity: 0.7;
     transform: rotate(-2.4deg) translate(-10px, -25px);
 }
 .why__actions__wrapper:not(.is-hidden) #why__action-1,
-.principles__wrapper:not(.is-hidden) .principle:nth-child(1) {
+.principles__wrapper:not(.is-hidden) .principle:nth-child(1),
+.steps__wrapper:not(.is-hidden) .step:nth-child(1) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.1s;
 }
 
 .why__actions__wrapper:not(.is-hidden) #why__action-2, 
-.principles__wrapper:not(.is-hidden) .principle:nth-child(2) {
+.principles__wrapper:not(.is-hidden) .principle:nth-child(2),
+.steps__wrapper:not(.is-hidden) .step:nth-child(2) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.3s;
 }
 
 .why__actions__wrapper:not(.is-hidden) #why__action-3,
-.principles__wrapper:not(.is-hidden) .principle:nth-child(3) {
+.principles__wrapper:not(.is-hidden) .principle:nth-child(3),
+.steps__wrapper:not(.is-hidden) .step:nth-child(3) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.5s;
 }
@@ -1208,6 +1211,9 @@ opacity: 0.7;
     position: absolute;
     top: 328px;
     left: 648px;
+    display: inline-block;
+    transform-origin: center;
+    animation: spin-and-pause 2s linear infinite;
 }
 
 .orange__star__familiar {
@@ -1228,6 +1234,12 @@ opacity: 0.7;
     border-radius: 12px;
     font-size: 24px;
     width: fit-content;
+}
+
+.circle__wrapper .highlighted__text{
+    display: inline-block;
+    animation: float-habit 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .highlighted__text--green {
@@ -1360,6 +1372,8 @@ opacity: 0.7;
     gap: 20px;
     background-color: var(--c-black);
     position: relative;
+    opacity: 0;
+    translate: 0 15px
 }
 
 .step__number {
@@ -1486,6 +1500,58 @@ opacity: 0.7;
     position: relative;
     top: 30px;
     left: 200px;
+    width: 114px;
+    opacity: 1;
+    transition: opacity 0.01s 0.1s;
+    transform: scale(1, -1);
+}
+
+.arrow__checklist.is-hidden {
+    opacity: 0;
+}
+
+#stat-arrow-mask-body-3,
+#stat-arrow-mask-loop-right-3,
+#stat-arrow-mask-loop-left-3,
+#stat-arrow-mask-tail-3,
+#stat-arrow-mask-barb1-3,
+#stat-arrow-mask-barb2-3 {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.arrow__checklist.is-hidden #stat-arrow-mask-body-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-loop-right-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-loop-left-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-tail-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-barb1-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-barb2-3 {
+    animation-play-state: paused;
+}
+
+#stat-arrow-mask-body-3 {
+    animation: draw 0.18s ease-in forwards;
+}
+
+#stat-arrow-mask-loop-right-3 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.18s;
+}
+
+#stat-arrow-mask-loop-left-3 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.236s;
+}
+
+#stat-arrow-mask-tail-3 {
+    animation: draw 0.22s ease-out forwards;
+    animation-delay: 0.292s;
+}
+
+#stat-arrow-mask-barb1-3,
+#stat-arrow-mask-barb2-3 {
+    animation: draw 0.048s linear forwards;
+    animation-delay: 0.512s;
 }
 
 /* disclaimer */
