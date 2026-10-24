@@ -9,7 +9,7 @@ const outDir = path.resolve(__dirname, 'docs')
 const pages = {
   main: {
     file: 'index.html',
-    chunks: ['/javascripts/allStyle.js']
+    chunks: ['/javascripts/allStyle.js', '/javascripts/animation.js']
   },
   test: {
     file: 'pages/test.html',
@@ -25,7 +25,7 @@ const pages = {
   },
   about: {
     file: 'pages/about.html',
-    chunks: ['/javascripts/allStyle.js']
+    chunks: ['/javascripts/allStyle.js', '/javascripts/animation.js']
   },
   'why-are-you-glued-to-the-phone': {
     file: 'pages/habits/why-are-you-glued-to-the-phone.html',
