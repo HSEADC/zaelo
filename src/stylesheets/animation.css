@@ -78,3 +78,39 @@
     }
 }
 
+
+@keyframes float-habit {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+
+    }
+}
+
+
+@keyframes spin-and-pause {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    15% {
+        transform: rotate(90deg) scale(1.15);
+    }
+
+    20% {
+        transform: rotate(90deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(80deg) scale(1);
+    }
+}
+

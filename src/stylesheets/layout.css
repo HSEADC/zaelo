@@ -610,7 +610,8 @@ opacity: 0.7;
     transform-origin: center;
     display: block;
 }
-.footer__social__wrapper a:hover .footer__social {
+.footer__social__wrapper a:hover .footer__social,
+.progress__social__wrapper a:hover .progress__social {
     transform: scale(1.1);
     opacity: 0.7;
 }
@@ -704,20 +705,28 @@ opacity: 0.7;
     color: var(--c-dark-teal);
     transform: rotate(-2.4deg) translate(-10px, -25px);
 }
-.why__actions__wrapper:not(.is-hidden) #why__action-1 {
+.why__actions__wrapper:not(.is-hidden) #why__action-1,
+.principles__wrapper:not(.is-hidden) .principle:nth-child(1) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.1s;
 }
 
-.why__actions__wrapper:not(.is-hidden) #why__action-2 {
+.why__actions__wrapper:not(.is-hidden) #why__action-2, 
+.principles__wrapper:not(.is-hidden) .principle:nth-child(2) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.3s;
 }
 
-.why__actions__wrapper:not(.is-hidden) #why__action-3 {
+.why__actions__wrapper:not(.is-hidden) #why__action-3,
+.principles__wrapper:not(.is-hidden) .principle:nth-child(3) {
     animation: showWhyAction 0.4s ease forwards;
     animation-delay: 0.5s;
 }
+.principles__wrapper:not(.is-hidden) .principle:nth-child(4) {
+    animation: showWhyAction 0.4s ease forwards;
+    animation-delay: 0.7s;
+}
+
 /* statistics */
 
 .statistics {
@@ -932,13 +941,56 @@ opacity: 0.7;
     border-radius: 100px;
     font-size: 18px;
     font-weight: 500;
+    display: inline-block;
+    animation: float-habit 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 #topics__habit-1 {
     background-color: var(--c-blue);
     color: var(--c-light-blue);
+    animation-duration: 4.5s;
+    animation-delay: -0.5s;
+}
+#topics__habit-2 {
+    animation-duration: 3.8s;
+    animation-delay: -1.2s;
 }
 
+#topics__habit-3 {
+    animation-duration: 5s;
+    animation-delay: -2s;
+}
+
+#topics__habit-4 {
+    animation-duration: 4.2s;
+    animation-delay: -0.8s;
+}
+
+#topics__habit-5 {
+    animation-duration: 3.5s;
+    animation-delay: -1.5s;
+}
+
+#topics__habit-6 {
+    animation-duration: 4.8s;
+    animation-delay: -0.3s;
+}
+
+#topics__habit-7 {
+    animation-duration: 4s;
+    animation-delay: -2.5s;
+}
+
+#topics__habit-8 {
+    animation-duration: 5.2s;
+    animation-delay: -1s;
+}
+
+#topics__habit-9 {
+    animation-duration: 3.9s;
+    animation-delay: -1.8s;
+}
 #topics__habit-2, #topics__habit-7 {
     background-color: var(--c-orange);
     color: var(--c-light-orange);
@@ -975,8 +1027,29 @@ opacity: 0.7;
 
 .topic__icon {
     width: 48px;
+    display: inline-block;
+    transform-origin: center;
+    animation: spin-and-pause 5s infinite;
+}
+.topic__wrapper:nth-child(1) .topic__icon {
+    animation-delay: 0s;
 }
 
+.topic__wrapper:nth-child(2) .topic__icon {
+    animation-delay: 1s;
+}
+
+.topic__wrapper:nth-child(3) .topic__icon {
+    animation-delay: 2s;
+}
+
+.topic__wrapper:nth-child(4) .topic__icon {
+    animation-delay: 3s;
+}
+
+.topic__wrapper:nth-child(5) .topic__icon {
+    animation-delay: 4s;
+}
 .topic__name {
     font-size: 20px;
 }
@@ -996,7 +1069,8 @@ opacity: 0.7;
     padding: 24px;
     background-color: var(--c-black);
     color: var(--c-white);
-    
+    opacity: 0;
+    translate: 0 15px;
 }
 
 .orange {
@@ -1036,6 +1110,9 @@ opacity: 0.7;
 
 .progress__social {
     width: 150px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+    display: block;
 }
 
 .progress__button {

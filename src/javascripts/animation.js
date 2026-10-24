@@ -103,10 +103,8 @@
     (entries) => {
       for (const e of entries) {
         if (e.isIntersecting) {
-          // 1. Запускаем первую
           arrow1.classList.remove('is-hidden');
           
-          // 2. Вторую через 1.5 секунды
           if (arrow2) {
             setTimeout(() => {
               arrow2.classList.remove('is-hidden');
@@ -121,6 +119,35 @@
     {
       threshold: 0.4,
       rootMargin: '0px 0px -20% 0px',
+    }
+  );
+
+  io.observe(target);
+})();
+
+
+(function initPrinciples() {
+  const target = document.querySelector('.principles__wrapper');
+  if (!target) return;
+
+  if (!('IntersectionObserver' in window)) {
+    target.classList.remove('is-hidden');
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          target.classList.remove('is-hidden');
+          io.disconnect();
+          return;
+        }
+      }
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0px 0px -10% 0px',
     }
   );
 
