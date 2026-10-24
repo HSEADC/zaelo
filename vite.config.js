@@ -27,16 +27,8 @@ const pages = {
     file: 'pages/about.html',
     chunks: ['/javascripts/allStyle.js']
   },
-  'social-scrolling': {
-    file: 'pages/habits/social-scrolling.html',
-    chunks: ['/javascripts/allStyle.js']
-  },
-  'why-the-brain-chooses-pleasure-now': {
-    file: 'pages/mechanisms/why-the-brain-chooses-pleasure-now.html',
-    chunks: ['/javascripts/allStyle.js']
-  },
-  'phone-in-every-pause': {
-    file: 'pages/habits/phone-in-every-pause.html',
+  'why-are-you-glued-to-the-phone': {
+    file: 'pages/habits/why-are-you-glued-to-the-phone.html',
     chunks: ['/javascripts/allStyle.js']
   },
 }
