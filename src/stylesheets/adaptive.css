@@ -886,6 +886,12 @@
         padding: 16px 24px;
         font-size: 20px;
         width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .why__action__text {
+        width: fit-content;
     }
 
     #why__action-1 {
@@ -912,7 +918,7 @@
     }
 
     .statistics__arrow__wrapper {
-        gap: 32px;
+        gap: 16px;
     }
 
     .arrow__wrapper__left {
@@ -920,13 +926,17 @@
     }
 
     .statistics__arrow-1 {
-        width: 60px;
-        transform: translate(0);
+        width: 80px;
+        height: auto;
+        transform: translate(30px, 10px) scale(1, -1);
+        margin-bottom: 16px;
     }
 
     .statistics__arrow-2 {
-        width: 40px;
-        transform: translate(0);
+        width: 80px;
+        height: auto;
+        transform: translate(-60px, 10px) scale(-1, -1);
+        margin-bottom: 16px;
     }
 
     .statistics__wrapper {

@@ -31,6 +31,14 @@ section {
     transform: translateX(-50%);
     z-index: 10;
 }
+.header__link svg {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.header__menu:hover .header__link svg {
+    transform: rotate(180deg) scale(1.2);
+}
 
 a {
     text-decoration: none;
@@ -91,6 +99,13 @@ a {
     font-weight: 500;
     text-align: center;
 }
+.hero__arrow.is-hidden {
+    opacity: 0;
+}
+
+.hero__arrow.is-hidden {
+    opacity: 0;
+}
 
 .hero__arrow {
     width: 88px;
@@ -135,9 +150,36 @@ a {
     top: 70%;
     right: 12%;
 }
-
 .hero__habit__icon {
     width: 48px;
+    opacity: 0;
+    translate: 0 15px;
+    scale: 0.9;
+    transition: scale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        rotate 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        translate 0.4s ease;
+    transform-origin: center;
+    margin-top: -15px;
+}
+
+@keyframes showIcon {
+    from {
+        opacity: 0;
+        translate: 0 15px;
+        scale: 0.9;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+.hero__habit__wrapper:has(.hero__habit__content:hover) .hero__habit__icon,
+.hero__habit__wrapper:hover .hero__habit__icon {
+    scale: 1.15;
+    rotate: 15deg;
 }
 
 .hero__habit__content {
@@ -168,6 +210,67 @@ a {
 #hero__habit__content-5 {
     background-color: var(--c-blue);
     color: var(--c-light-blue);
+}
+
+.hero__habit__icon {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+}
+
+.hero__habit__content {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+#hero__habit-1 .hero__habit__icon {
+    animation: showIcon 0.3s ease forwards;
+    animation-delay: 0.1s;
+}
+
+#hero__habit-1 .hero__habit__content {
+    animation: showContent 0.3s ease forwards;
+    animation-delay: 0.2s;
+}
+
+#hero__habit-2 .hero__habit__icon {
+    animation: showIcon 0.3s ease forwards;
+    animation-delay: 0.25s;
+}
+
+#hero__habit-2 .hero__habit__content {
+    animation: showContent 0.3s ease forwards;
+    animation-delay: 0.35s;
+}
+
+#hero__habit-3 .hero__habit__icon {
+    animation: showIcon 0.3s ease forwards;
+    animation-delay: 0.4s;
+}
+
+#hero__habit-3 .hero__habit__content {
+    animation: showContent 0.3s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#hero__habit-4 .hero__habit__icon {
+    animation: showIcon 0.3s ease forwards;
+    animation-delay: 0.55s;
+}
+
+#hero__habit-4 .hero__habit__content {
+    animation: showContent 0.3s ease forwards;
+    animation-delay: 0.65s;
+}
+
+#hero__habit-5 .hero__habit__icon {
+    animation: showIcon 0.3s ease forwards;
+    animation-delay: 0.7s;
+}
+
+#hero__habit-5 .hero__habit__content {
+    animation: showContent 0.3s ease forwards;
+    animation-delay: 0.8s;
 }
 
 .hero__habit__title {
@@ -202,6 +305,24 @@ a {
     bottom: 50px;
     right: 0;
     z-index: -1;
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+    transform-origin: center; 
+    transition: transform 0.3s ease;
+}
+.questions__row:not(.is-hidden) #question__content-1+.question__star {
+    animation: popStar 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+.questions__row:not(.is-hidden) #question__content-2+.question__star {
+    animation: popStar 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.35s;
+}
+
+.questions__row:not(.is-hidden) #question__content-3+.question__star {
+    animation: popStar 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.6s;
 }
 
 .question__content {
@@ -239,12 +360,63 @@ a {
     text-align: center;
 }
 
+.question__arrow.is-hidden {
+    opacity: 0;
+}
+
 .question__arrow {
     width: 114px;
     position: absolute;
     top: -70px;
     left: 105%;
+    opacity: 1;
+    transition: opacity 0.01s 0.1s;
 }
+
+#arrow-mask-body,
+#arrow-mask-loop-right,
+#arrow-mask-loop-left,
+#arrow-mask-tail,
+#arrow-mask-barb1,
+#arrow-mask-barb2 {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.question__arrow.is-hidden #arrow-mask-body,
+.question__arrow.is-hidden #arrow-mask-loop-right,
+.question__arrow.is-hidden #arrow-mask-loop-left,
+.question__arrow.is-hidden #arrow-mask-tail,
+.question__arrow.is-hidden #arrow-mask-barb1,
+.question__arrow.is-hidden #arrow-mask-barb2 {
+    animation-play-state: paused;
+}
+
+#arrow-mask-body {
+    animation: draw 0.18s ease-in forwards;
+}
+
+#arrow-mask-loop-right {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.18s;
+}
+
+#arrow-mask-loop-left {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.236s;
+}
+
+#arrow-mask-tail {
+    animation: draw 0.22s ease-out forwards;
+    animation-delay: 0.292s;
+}
+
+#arrow-mask-barb1,
+#arrow-mask-barb2 {
+    animation: draw 0.048s linear forwards;
+    animation-delay: 0.512s;
+}
+
 
 /* form */
 
@@ -294,10 +466,12 @@ a {
     color: var(--c-white);
     font-weight: 500;
     font-family: inherit;
-    transition: background-color 0.3s ease-in;
+    transition: all 0.3s ease;
+    transform-origin: center; 
+    cursor: pointer;
 }
-
 .button:hover {
+    transform: scale(1.1);
     background-color: #FF6C3A;
 }
 
@@ -420,7 +594,9 @@ footer {
     font-size: 24px;
     font-weight: 500;
 }
-
+.footer__link:hover {
+opacity: 0.7;
+}
 .footer__link::after {
     content: url("../images/arrow-link.svg");
     width: 16px;
@@ -434,6 +610,14 @@ footer {
 
 .footer__social {
     width: 48px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+    display: block;
+}
+.footer__social__wrapper a:hover .footer__social,
+.progress__social__wrapper a:hover .progress__social {
+    transform: scale(1.1);
+    opacity: 0.7;
 }
 
 /* ABOUT */
@@ -469,6 +653,9 @@ footer {
 
 .about__h1__question__symbol {
     width: 120px;
+    display: inline-block;
+    transform-origin: center;
+    animation: pulse-with-pause 2s linear infinite;
 }
 
 .about__text {
@@ -501,6 +688,8 @@ footer {
     font-size: 24px;
     font-weight: 500;
     border-radius: 16px;
+    opacity: 0;
+    transform: translateY(15px);
 }
 
 #why__action-1 {
@@ -520,6 +709,30 @@ footer {
     background-color: var(--c-teal);
     color: var(--c-dark-teal);
     transform: rotate(-2.4deg) translate(-10px, -25px);
+}
+.why__actions__wrapper:not(.is-hidden) #why__action-1,
+.principles__wrapper:not(.is-hidden) .principle:nth-child(1),
+.steps__wrapper:not(.is-hidden) .step:nth-child(1) {
+    animation: showWhyAction 0.4s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.why__actions__wrapper:not(.is-hidden) #why__action-2, 
+.principles__wrapper:not(.is-hidden) .principle:nth-child(2),
+.steps__wrapper:not(.is-hidden) .step:nth-child(2) {
+    animation: showWhyAction 0.4s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.why__actions__wrapper:not(.is-hidden) #why__action-3,
+.principles__wrapper:not(.is-hidden) .principle:nth-child(3),
+.steps__wrapper:not(.is-hidden) .step:nth-child(3) {
+    animation: showWhyAction 0.4s ease forwards;
+    animation-delay: 0.5s;
+}
+.principles__wrapper:not(.is-hidden) .principle:nth-child(4) {
+    animation: showWhyAction 0.4s ease forwards;
+    animation-delay: 0.7s;
 }
 
 /* statistics */
@@ -548,12 +761,113 @@ footer {
 
 .statistics__arrow-1 {
     width: 114px;
-    transform: translate(30px, -10px);
+    transform: translate(30px, 10px) scale(1, -1);
+    opacity: 1;
+    transition: opacity 0.01s 0.1s;
+}
+
+.statistics__arrow-1.is-hidden {
+    opacity: 0;
+}
+
+#stat-arrow-mask-body,
+#stat-arrow-mask-loop-right,
+#stat-arrow-mask-loop-left,
+#stat-arrow-mask-tail,
+#stat-arrow-mask-barb1,
+#stat-arrow-mask-barb2 {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.statistics__arrow-1.is-hidden #stat-arrow-mask-body,
+.statistics__arrow-1.is-hidden #stat-arrow-mask-loop-right,
+.statistics__arrow-1.is-hidden #stat-arrow-mask-loop-left,
+.statistics__arrow-1.is-hidden #stat-arrow-mask-tail,
+.statistics__arrow-1.is-hidden #stat-arrow-mask-barb1,
+.statistics__arrow-1.is-hidden #stat-arrow-mask-barb2 {
+    animation-play-state: paused;
+}
+
+#stat-arrow-mask-body {
+    animation: draw 0.18s ease-in forwards;
+}
+
+#stat-arrow-mask-loop-right {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.18s;
+}
+
+#stat-arrow-mask-loop-left {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.236s;
+}
+
+#stat-arrow-mask-tail {
+    animation: draw 0.22s ease-out forwards;
+    animation-delay: 0.292s;
+}
+
+#stat-arrow-mask-barb1,
+#stat-arrow-mask-barb2 {
+    animation: draw 0.048s linear forwards;
+    animation-delay: 0.512s;
 }
 
 .statistics__arrow-2 {
-    width: 82px;
-    transform: translate(-60px, 10px);
+    width: 114px;
+    transform: translate(-60px, 10px) scale(-1, -1);
+    transition: opacity 0.01s 0.1s;
+}
+
+.statistics__arrow-2.is-hidden {
+    opacity: 0;
+}
+
+#stat-arrow-mask-body-2,
+#stat-arrow-mask-loop-right-2,
+#stat-arrow-mask-loop-left-2,
+#stat-arrow-mask-tail-2,
+#stat-arrow-mask-barb1-2,
+#stat-arrow-mask-barb2-2 {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+/* Пауза, пока висит is-hidden */
+.statistics__arrow-2.is-hidden #stat-arrow-mask-body-2,
+.statistics__arrow-2.is-hidden #stat-arrow-mask-loop-right-2,
+.statistics__arrow-2.is-hidden #stat-arrow-mask-loop-left-2,
+.statistics__arrow-2.is-hidden #stat-arrow-mask-tail-2,
+.statistics__arrow-2.is-hidden #stat-arrow-mask-barb1-2,
+.statistics__arrow-2.is-hidden #stat-arrow-mask-barb2-2 {
+    animation-play-state: paused;
+}
+
+/* Тайминги для второй стрелки (рисуется так же, как первая) */
+#stat-arrow-mask-body-2 {
+    animation: draw 0.18s ease-in forwards;
+}
+
+#stat-arrow-mask-loop-right-2 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.18s;
+}
+
+#stat-arrow-mask-loop-left-2 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.236s;
+}
+
+#stat-arrow-mask-tail-2 {
+    animation: draw 0.22s ease-out forwards;
+    animation-delay: 0.292s;
+}
+
+#stat-arrow-mask-barb1-2,
+#stat-arrow-mask-barb2-2 {
+    animation: draw 0.048s linear forwards;
+    animation-delay: 0.512s;
 }
 
 .statistics__wrapper {
@@ -614,6 +928,9 @@ footer {
     border-radius: 100px;
     font-size: 18px;
     font-weight: 500;
+    display: inline-block;
+    animation: float-habit 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 #topics__habit-1 {
@@ -644,47 +961,65 @@ footer {
 #topics__habit-1 {
     top: 10%;
     left: 25%;
+    animation-duration: 4.5s;
+    animation-delay: -0.5s;
 }
 
 #topics__habit-2 {
     top: 10%;
     right: 25%;
+    animation-duration: 3.8s;
+    animation-delay: -1.2s;
 }
 
 #topics__habit-3 {
     top: 30%;
     left: 12%;
+    animation-duration: 3.5s;
+    animation-delay: -1.5s;
 }
 
 #topics__habit-4 {
     top: 30%;
     right: 8%;
+    animation-duration: 4.2s;
+    animation-delay: -0.8s;
 }
 
 #topics__habit-5 {
     top: 50%;
     left: 6%;
+    animation-duration: 3.5s;
+    animation-delay: -1.5s;
 }
 
 #topics__habit-6 {
     top: 50%;
     right: 6%;
+    animation-duration: 4.8s;
+    animation-delay: -0.3s;
 }
 
 #topics__habit-7 {
     bottom: 20%;
     left: 12%;
+    animation-duration: 4s;
+    animation-delay: -2.5s;
 }
 
 #topics__habit-8 {
     bottom: 20%;
     right: 12%;
+    animation-duration: 5.2s;
+    animation-delay: -1s;
 }
 
 #topics__habit-9 {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    animation-duration: 3.9s;
+    animation-delay: -1.8s;
 }
 
 .topics__row {
@@ -703,8 +1038,29 @@ footer {
 
 .topic__icon {
     width: 48px;
+    display: inline-block;
+    transform-origin: center;
+    animation: spin-and-pause 5s infinite;
+}
+.topic__wrapper:nth-child(1) .topic__icon {
+    animation-delay: 0s;
 }
 
+.topic__wrapper:nth-child(2) .topic__icon {
+    animation-delay: 1s;
+}
+
+.topic__wrapper:nth-child(3) .topic__icon {
+    animation-delay: 2s;
+}
+
+.topic__wrapper:nth-child(4) .topic__icon {
+    animation-delay: 3s;
+}
+
+.topic__wrapper:nth-child(5) .topic__icon {
+    animation-delay: 4s;
+}
 .topic__name {
     font-size: 20px;
 }
@@ -724,7 +1080,8 @@ footer {
     padding: 24px;
     background-color: var(--c-black);
     color: var(--c-white);
-    
+    opacity: 0;
+    translate: 0 15px;
 }
 
 .orange {
@@ -764,6 +1121,9 @@ footer {
 
 .progress__social {
     width: 150px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+    display: block;
 }
 
 .progress__button {
@@ -873,6 +1233,9 @@ footer {
     position: absolute;
     top: 242px;
     left: 569px;
+    display: inline-block;
+    transform-origin: center;
+    animation: spin-and-pause 2s linear infinite;
 }
 
 .orange__star__familiar {
@@ -895,6 +1258,12 @@ footer {
     border-radius: 12px;
     font-size: 24px;
     width: fit-content;
+}
+
+.circle__wrapper .highlighted__text{
+    display: inline-block;
+    animation: float-habit 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .highlighted__text--green {
@@ -1033,6 +1402,8 @@ footer {
     gap: 20px;
     background-color: var(--c-black);
     position: relative;
+    opacity: 0;
+    translate: 0 15px
 }
 
 .step__number {
@@ -1173,6 +1544,58 @@ footer {
     position: relative;
     top: 30px;
     left: 200px;
+    width: 114px;
+    opacity: 1;
+    transition: opacity 0.01s 0.1s;
+    transform: scale(1, -1);
+}
+
+.arrow__checklist.is-hidden {
+    opacity: 0;
+}
+
+#stat-arrow-mask-body-3,
+#stat-arrow-mask-loop-right-3,
+#stat-arrow-mask-loop-left-3,
+#stat-arrow-mask-tail-3,
+#stat-arrow-mask-barb1-3,
+#stat-arrow-mask-barb2-3 {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.arrow__checklist.is-hidden #stat-arrow-mask-body-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-loop-right-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-loop-left-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-tail-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-barb1-3,
+.arrow__checklist.is-hidden #stat-arrow-mask-barb2-3 {
+    animation-play-state: paused;
+}
+
+#stat-arrow-mask-body-3 {
+    animation: draw 0.18s ease-in forwards;
+}
+
+#stat-arrow-mask-loop-right-3 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.18s;
+}
+
+#stat-arrow-mask-loop-left-3 {
+    animation: draw 0.056s linear forwards;
+    animation-delay: 0.236s;
+}
+
+#stat-arrow-mask-tail-3 {
+    animation: draw 0.22s ease-out forwards;
+    animation-delay: 0.292s;
+}
+
+#stat-arrow-mask-barb1-3,
+#stat-arrow-mask-barb2-3 {
+    animation: draw 0.048s linear forwards;
+    animation-delay: 0.512s;
 }
 
 /* disclaimer */
