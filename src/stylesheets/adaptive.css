@@ -1115,6 +1115,10 @@
         bottom: -50px;
     }
 
+    .article__mascot:hover {
+        transform: translateX(50%) translateY(16px);
+    }
+
     .article__hero__content {
         gap: 16px;
     }

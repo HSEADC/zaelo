@@ -294,6 +294,11 @@ a {
     color: var(--c-white);
     font-weight: 500;
     font-family: inherit;
+    transition: background-color 0.3s ease-in;
+}
+
+.button:hover {
+    background-color: #FF6C3A;
 }
 
 .form__label {
@@ -804,6 +809,10 @@ footer {
     transition: transform 0.5s ease;
 }
 
+.article__mascot:hover {
+    transform: translateY(-16px)
+}
+
 .article__hero__content {
     display: flex;
     flex-direction: column;
@@ -1144,6 +1153,10 @@ footer {
     display: flex;
     gap: 8px;
     background-color: var(--c-black);
+}
+
+.download__button:hover {
+    background-color: #323131;
 }
 
 .no__notifications__wrapper {
