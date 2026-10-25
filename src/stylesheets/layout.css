@@ -764,6 +764,7 @@ footer {
 .progress__button {
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 
 .button__arrow__white {
@@ -816,6 +817,7 @@ footer {
     width: fit-content;
     border-radius: 100px;
     font-weight: 500;
+    font-size: 18px;
 }
 
 .article__h1, .article__h2 {
@@ -833,6 +835,7 @@ footer {
 .article__text {
     text-align: center;
     font-size: 24px;
+    width: 480px;
 }
 
 .article__hero__text {
@@ -868,6 +871,8 @@ footer {
     top: -37px;
     left: 198px;
 }
+
+/* familiar */
 
 .familiar {
     height: 350px;
@@ -927,6 +932,11 @@ footer {
 
 .arrow__familiar {
     position: absolute;
+    width: 270px;
+}
+
+.arrow__familiar--mobile {
+    display: none;
 }
 
 #arrow__familiar-1 {
@@ -970,6 +980,7 @@ footer {
     align-items: center;
     flex-direction: column;
     gap: 24px;
+    width: 300px;
 }
 
 .consequence__icon {
@@ -1072,7 +1083,14 @@ footer {
 }
 
 .quote__text::before {
-    content: url(../images/quotes.svg);
+    content: "";
+    display: inline-block;
+    width: 44px;
+    height: 40px;
+    background-image: url(../images/quotes.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-right: 16px;
 }
 
@@ -1084,6 +1102,9 @@ footer {
 
 .checklist__wrapper {
     background-image: url(../images/checklist-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     flex-direction: row;
     justify-content: space-between;
     padding: 48px;
